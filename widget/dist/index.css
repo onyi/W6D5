@@ -1,0 +1,75 @@
+body {
+  background-image: url('../images/background.png');
+  color: rgb(224, 19, 19);
+}
+
+.body-section{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.widget > h1{
+  text-align: center;
+}
+
+.widget > h1:nth-of-type(2){
+    text-align: left;
+}
+
+.clock-values {
+  font-family: fantasy;
+  
+  background: lightblue;
+  width: 500px;
+  border: 2px black solid;
+  
+  text-align: center;
+}
+
+.clock-title {
+  font-family: fantasy;
+}
+
+.clock-widget {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.tabs-widget {
+  width: 150px;
+  border: 2px gray solid;
+  background: lightcoral;
+  height: 200px;
+  padding-top: 0px;
+}
+
+.tabs-list{
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  width: 150px;
+  height: 20px;
+  padding: 0;
+
+}
+
+.tabs-list button {
+  width: 50px;
+  background: inherit;
+  border: 2px black solid;
+}
+
+.button-special {
+  border: 2px white solid;
+}
+
+.tab-content {
+  width: 100%;
+  color: darkblue;
+}
+

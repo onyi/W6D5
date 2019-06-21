@@ -4,31 +4,22 @@ class Clock extends React.Component {
 
   constructor(props){
     super(props);
-    // const time = new Date();
-    // console.log(time.getSeconds());
     this.state = {
-      // hour: time.getHours(),
-      // minute: time.getMinutes(),
-      // second: time.getSeconds(),
+
       time: new Date()
     },
-    // console.log(`${this.hour} ${this.minute} ${this.second}`);
     this.tick = this.tick.bind(this);
-    setInterval(this.tick, 1000);
+    
   }
 
   tick(){
-    // const { hour, minute, second, time } = this.state;
 
     let h = this.state.time.getHours();
     let m = this.state.time.getMinutes();
     let s = this.state.time.getSeconds();
-    // console.log(`${this.hour} ${this.minute} ${this.second}`);
-    // let h = this.hour;
-    // let m = this.minute;
-    // let s = this.second;
+
     s += 1
-    console.log(`Second: ${s}`);
+    // console.log(`Second: ${s}`);
     if(s > 59){
       m += 1;
       s = 0;
@@ -43,7 +34,6 @@ class Clock extends React.Component {
     this.state.time.setHours(h);
     this.state.time.setMinutes(m);
     this.state.time.setSeconds(s);
-    // console.log(`${this.hour} ${this.minute} ${this.second}`);
     this.setState({ time: this.state.time });
   }
 
@@ -57,15 +47,22 @@ class Clock extends React.Component {
     let h = time.getHours();
     if (h < 10) h = '0' + h;
     
+    
     return (
+
       <div className="clock-widget">
-        <h3>This is a clock</h3>
-        <h4>{h}:{m}:{s}</h4>
+        <h2 className="clock-title">Clock</h2>
+        <div className="clock-values">
+          <h3>Time: {h}:{m}:{s}</h3>
+          <h3>Date: {time.toDateString()}</h3>
+        </div>
       </div>
     );
   }
 
-
+  componentDidMount() {
+    setInterval(this.tick, 1000);
+  }
 
 }
 
