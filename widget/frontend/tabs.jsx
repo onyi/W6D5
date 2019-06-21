@@ -39,6 +39,7 @@ class Tabs extends React.Component {
               return <li><button onClick={() => this.selectTab(el.title)}>{el.title}</button></li>;  
             }
             })}
+            
         </ul>
         <div className="tab-content">
           <p>{panes[this.state.selectedTab].content}</p>

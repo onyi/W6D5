@@ -28,8 +28,22 @@ class Widget extends React.Component {
         <h1>Widget</h1>
         <Clock />
 
-        <h1>Tabs</h1>
-        <Tabs panes = {panes}/>
+        <div className="widget-row">
+          <div className="widget-content">
+            <h1>Tabs</h1>
+            <Tabs panes = {panes}/>
+          </div>
+
+          {/* <div className="widget-content">
+            <h1>Weather</h1>
+            <Weather weather = { weather} />
+          </div>
+
+          <div className="widget-content">
+            <h1>Autocomplete Widget</h1>
+            <Tabs contentlists={contentlists} />
+          </div> */}
+        </div>
       </div>
     )
   }

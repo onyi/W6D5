@@ -73,3 +73,6 @@ body {
   color: darkblue;
 }
 
+.widget-row{
+  display: block;
+}
