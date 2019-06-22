@@ -24,20 +24,17 @@ class Tabs extends React.Component {
   }
 
   render() {
-    const panes = this.state.panes;
-    console.log(panes);
-    Array.from(panes).forEach( (el) => {
-      console.log(el);
-    })
+    const { panes, selectedTab} = this.state;
+    // console.log(panes);
+    // Array.from(panes).forEach( (el) => {
+    //   console.log(el);
+    // });
     return (
       <div className="tabs-widget">
         <ul className="tabs-list">
-          {panes.map((el) => { 
-            if (el.title === panes[this.state.selectedTab].title) {
-              return <li className="button-special"><button onClick={() => this.selectTab(el.title)} >{el.title}</button></li>;
-            } else {
-              return <li><button onClick={() => this.selectTab(el.title)}>{el.title}</button></li>;  
-            }
+          {panes.map((el, idx) => { 
+            // console.log(idx);
+            return <li className={this.state.selectedTab === idx ? "button-special" : ""} key={el.title}><button onClick={() => this.selectTab(el.title)} >{el.title}</button></li>;
             })}
             
         </ul>

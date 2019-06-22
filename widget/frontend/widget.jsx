@@ -1,6 +1,7 @@
 import React from 'react';
 import Clock from './clock';
 import Tabs from './tabs';
+import Weather from './weather';
 
 
 class Widget extends React.Component {
@@ -34,12 +35,12 @@ class Widget extends React.Component {
             <Tabs panes = {panes}/>
           </div>
 
-          {/* <div className="widget-content">
+          <div className="widget-content">
             <h1>Weather</h1>
-            <Weather weather = { weather} />
+            <Weather/>
           </div>
 
-          <div className="widget-content">
+          {/* <div className="widget-content">
             <h1>Autocomplete Widget</h1>
             <Tabs contentlists={contentlists} />
           </div> */}
