@@ -35,7 +35,7 @@ class Widget extends React.Component {
             <Tabs panes = {panes}/>
           </div>
 
-          <div className="widget-content">
+          <div className="widget-content weather-widget">
             <h1>Weather</h1>
             <Weather/>
           </div>

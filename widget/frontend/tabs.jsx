@@ -18,9 +18,7 @@ class Tabs extends React.Component {
         return;
       }
     });
-    console.log(idx);
     this.setState({selectedTab: idx})
-    console.log(`${title}`);
   }
 
   render() {
@@ -48,6 +46,7 @@ class Tabs extends React.Component {
   componentDidMount() {
     
   }
+  
 }
 
 export default Tabs;

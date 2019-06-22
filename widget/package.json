@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack --watch --mode=development",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "npm install webpack webpack-cli react react-dom @babel/core @babel/preset-env @babel/preset-react babel-loader"
+    "install": "npm install webpack webpack-cli react react-dom @babel/core @babel/preset-env @babel/preset-react babel-loader axios"
   },
   "keywords": [],
   "author": "Onyex",
@@ -15,6 +15,7 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "axios": "^0.19.0",
     "babel-loader": "^8.0.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

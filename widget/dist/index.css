@@ -77,3 +77,13 @@ body {
   display: flex;
   justify-content: space-around;
 }
+
+.weather-widget{
+  /* margin: 15px; */
+}
+
+.weather-widget-content{
+  border: 2px rgb(228, 152, 12) solid;
+  padding: 10px;
+  background: lightgoldenrodyellow;
+}
