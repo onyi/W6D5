@@ -24,14 +24,14 @@ class Weather extends React.Component {
     let coord = location.coords;
     this.setState({ lat: coord.latitude, lon: coord.longitude });
     let requestUrl = `http://api.openweathermap.org/data/2.5/weather?lat=${this.state.lat}&lon=${this.state.lon}&units=${this.state.unit}&appid=88483962981171fe18887d4fdd77d5c5`;
-    console.log(requestUrl);
+    // console.log(requestUrl);
     const request = new XMLHttpRequest();
     let that = this;
     request.addEventListener('load', function(){
       if(this.readyState === 4 && this.status === 200){
-        console.log(this.responseText);
+        // console.log(this.responseText);
         let tempInfo = JSON.parse(this.responseText);
-        console.log(tempInfo);
+        // console.log(tempInfo);
         that.setState({ temp: tempInfo.main.temp, city: tempInfo.name });
       }
     });
